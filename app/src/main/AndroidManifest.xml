@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlgoGame">
+        <activity android:name=".Stack_Game"></activity>
+        <activity android:name=".PushandPop_Stack_Tutorial" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

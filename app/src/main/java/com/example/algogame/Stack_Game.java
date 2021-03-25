@@ -3,6 +3,7 @@ package com.example.algogame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Stack_Game extends AppCompatActivity {
@@ -10,6 +11,9 @@ public class Stack_Game extends AppCompatActivity {
     TextView scramble;
     TextView stack;
     TextView result;
+    TextView scrambleText;
+    Button changeText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +25,26 @@ public class Stack_Game extends AppCompatActivity {
         result = findViewById(R.id.result);
 
         //Generating Prompt
-        String bufferPrompt = "BIKECYCLE";
-        prompt.setText(bufferPrompt);
+            String bufferPrompt = "BIKECYCLE";
+            prompt.setText(bufferPrompt);
         //
 
         //Scramble Text
-        String bufferScramble = "EBKIYCELC";
-        scramble.setText(bufferScramble);
+
+            String bufferScramble = "CC";
+            scrambleText = findViewById((R.id.scrambleText));
+            scrambleText.setText(bufferScramble);
+
+            //((TextView)findViewById(R.id.scramble).setText(bufferScramble));
+
+        //
+            //changeText= findViewByID(R.id.changeText);
+            //changeText.setOnClickListener();
         //
     }
+
+
+
+
+
 }

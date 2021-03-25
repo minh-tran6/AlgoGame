@@ -10,8 +10,10 @@
         android:id="@+id/textView4"
         android:layout_width="107dp"
         android:layout_height="51dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="BIKECYCLE"
-        tools:layout_editor_absoluteX="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="93dp" />
 
     <TextView
@@ -32,17 +34,21 @@
         android:id="@+id/prompt"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
         android:text="Prompt"
-        tools:layout_editor_absoluteX="78dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="94dp" />
 
     <TextView
         android:id="@+id/scramble"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         android:text="Scramble"
         app:layout_constraintEnd_toEndOf="@+id/prompt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prompt" />
 
     <TextView
@@ -64,11 +70,15 @@
         app:layout_constraintTop_toBottomOf="@+id/stack" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/scrambleText"
         android:layout_width="107dp"
         android:layout_height="51dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:text="EBKIYCELC"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="178dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toEndOf="@+id/scramble"
+        tools:layout_editor_absoluteY="192dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,35 +7,68 @@
     tools:context=".Stack_Game">
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        tools:layout_editor_absoluteX="50dp" />
+        android:id="@+id/textView4"
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        android:text="BIKECYCLE"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="93dp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="50dp" />
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="393dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/prompt"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="50dp" />
+        android:text="Prompt"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <TextView
+        android:id="@+id/scramble"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Scramble"
+        app:layout_constraintEnd_toEndOf="@+id/prompt"
+        app:layout_constraintTop_toBottomOf="@+id/prompt" />
+
+    <TextView
+        android:id="@+id/stack"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Stack"
+        app:layout_constraintEnd_toEndOf="@+id/scramble"
+        app:layout_constraintTop_toBottomOf="@+id/scramble" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Result"
+        app:layout_constraintEnd_toEndOf="@+id/stack"
+        app:layout_constraintTop_toBottomOf="@+id/stack" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        android:text="EBKIYCELC"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="178dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

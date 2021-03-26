@@ -7,44 +7,57 @@
     tools:context=".Stack_Game">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="107dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:id="@+id/promptText"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="BIKECYCLE"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="107dp"
-        android:layout_height="51dp"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="393dp" />
+        android:id="@+id/resultText"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stackText"
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="107dp"
-        android:layout_height="51dp"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="293dp" />
+        android:id="@+id/stackText"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrambleText" />
 
     <TextView
         android:id="@+id/prompt"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
         android:text="Prompt"
+        app:layout_constraintEnd_toStartOf="@+id/promptText"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/scramble"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
         android:text="Scramble"
         app:layout_constraintEnd_toEndOf="@+id/prompt"
         app:layout_constraintHorizontal_bias="1.0"
@@ -55,30 +68,85 @@
         android:id="@+id/stack"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:text="Stack"
         app:layout_constraintEnd_toEndOf="@+id/scramble"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scramble" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:text="Result"
-        app:layout_constraintEnd_toEndOf="@+id/stack"
-        app:layout_constraintTop_toBottomOf="@+id/stack" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resultText"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stack"
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
         android:id="@+id/scrambleText"
-        android:layout_width="107dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="EBKIYCELC"
+        app:layout_constraintBottom_toTopOf="@+id/stackText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toEndOf="@+id/scramble"
-        tools:layout_editor_absoluteY="192dp" />
+        app:layout_constraintTop_toBottomOf="@+id/promptText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/push_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="PUSH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/pop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="POP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <Button
+        android:id="@+id/instructionStack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="50dp"
+        android:text="INSTRUCTION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/submitStack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="50dp"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

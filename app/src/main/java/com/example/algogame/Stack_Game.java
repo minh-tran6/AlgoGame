@@ -11,7 +11,11 @@ public class Stack_Game extends AppCompatActivity {
     TextView scramble;
     TextView stack;
     TextView result;
+    TextView promptText;
     TextView scrambleText;
+    TextView stackText;
+    TextView resultText;
+
     Button changeText;
 
     @Override
@@ -24,13 +28,17 @@ public class Stack_Game extends AppCompatActivity {
         stack = findViewById(R.id.stack);
         result = findViewById(R.id.result);
 
+        promptText = findViewById(R.id.promptText);
+        scrambleText = findViewById(R.id.scrambleText);
+        stackText = findViewById(R.id.stackText);
+        resultText = findViewById(R.id.resultText);
+
         //Generating Prompt
             String bufferPrompt = "BIKECYCLE";
-            prompt.setText(bufferPrompt);
+            promptText.setText(bufferPrompt);
         //
 
         //Scramble Text
-
             String bufferScramble = "CC";
             scrambleText = findViewById((R.id.scrambleText));
             scrambleText.setText(bufferScramble);

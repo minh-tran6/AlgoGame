@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homescreen">
+    <TextView
+        android:id = "@+id/player"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="146dp"/>
+    <Button
+        android:id="@+id/button_queue"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="246dp"
+        android:textStyle="bold|italic"
+        android:text="QUEUE GAME" />
+
+    <Button
+        android:id="@+id/button_stack"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="326dp"
+        android:text="STACK GAME"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/button_sort"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="406dp"
+        android:textStyle="bold|italic"
+        android:text="SORT GAME" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="486dp"
+        android:textStyle="bold|italic"
+        android:text="EXIT" />
+
+
+
+
+</RelativeLayout>

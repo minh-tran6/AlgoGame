@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Stack_Game extends AppCompatActivity {
+public class Stack_Game extends MainActivity {
     TextView prompt;
     TextView scramble;
     TextView stack;

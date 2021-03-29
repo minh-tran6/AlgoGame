@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Sort_Game extends AppCompatActivity {
+public class Sort_Game extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

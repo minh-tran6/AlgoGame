@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PushandPop_Stack_Tutorial extends AppCompatActivity {
+public class PushandPop_Stack_Tutorial extends MainActivity {
 
     Button start_button_stack;
     @Override

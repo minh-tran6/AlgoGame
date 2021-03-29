@@ -7,89 +7,35 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    Button stackgame;
-    Button queuegame;
-    Button sortgame;
-    Button exitApp;
+
+    Button button_get_name;
+    String user_name ;
+    EditText getName;
+    public static final String EXTRA_NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getName = findViewById(R.id.getName);
+        button_get_name = findViewById(R.id.button_name);
 
-
-        //------------------------------------------------------------------------------
-        // STACK GAME MENU
-
-        stackgame = findViewById(R.id.button_stack);
-        stackgame.setBackgroundColor(Color.BLACK);
-        stackgame.setOnClickListener(new View.OnClickListener() {
+        button_get_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newStackGame = new Intent(getApplicationContext(),PushandPop_Stack_Tutorial.class);
-                startActivity(newStackGame);
+                user_name = getName.getText().toString();
+                Intent intent = new Intent( MainActivity.this, homescreen.class);
+                intent.putExtra(EXTRA_NAME,user_name);
+                startActivity(intent);
             }
         });
+    }
 
-        //------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------
-        // QUEUE GAME MENU
-        queuegame = findViewById(R.id.button_queue);
-        queuegame.setBackgroundColor(Color.BLACK);
-        queuegame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newQueueGame = new Intent(getApplicationContext(),Queue_Game.class);
-                startActivity(newQueueGame);
-            }
-        });
-
-        //------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------
-        // SORT GAME MENU
-        sortgame = findViewById(R.id.button_sort);
-        sortgame.setBackgroundColor(Color.BLACK);
-        sortgame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newSortGame = new Intent(getApplicationContext(),Sort_Game.class);
-                startActivity(newSortGame);
-            }
-        });
-
-        //------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------
-        // EXIT APP
-        exitApp = findViewById(R.id.button_exit);
-        exitApp.setBackgroundColor(Color.BLACK);
-        exitApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Do you want to exit ?");
-                builder.setCancelable(true);
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int i) {
-                        dialog.cancel();
-                    }
-                });
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int i) {
-                        finish();
-                    }
-                });
-                AlertDialog alert = builder.create();
-                alert.show();
-            }
-        });
-
-        //------------------------------------------------------------------------------
-}
 }

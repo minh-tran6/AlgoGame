@@ -3,8 +3,11 @@ package com.example.algogame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.algogame.Object.Stack_Object;
 
 public class Stack_Game extends MainActivity {
     TextView prompt;
@@ -16,12 +19,14 @@ public class Stack_Game extends MainActivity {
     TextView stackText;
     TextView resultText;
 
-    Button changeText;
+    Button push_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stack__game);
+
+        Stack_Object newGame = new Stack_Object();
 
         prompt = findViewById(R.id.prompt);
         scramble = findViewById(R.id.scramble);
@@ -33,22 +38,25 @@ public class Stack_Game extends MainActivity {
         stackText = findViewById(R.id.stackText);
         resultText = findViewById(R.id.resultText);
 
+        push_button = findViewById(R.id.push_button);
+
         //Generating Prompt
             String bufferPrompt = "BIKECYCLE";
-            promptText.setText(bufferPrompt);
-        //
+            promptText.setText(newGame.getPrompt(1));
 
         //Scramble Text
-            String bufferScramble = "CC";
+            newGame.setScramble();
             scrambleText = findViewById((R.id.scrambleText));
-            scrambleText.setText(bufferScramble);
+            scrambleText.setText(newGame.getScramble());
 
-            //((TextView)findViewById(R.id.scramble).setText(bufferScramble));
+        push_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stackText.setText(newGame.getStack());
+                scrambleText.setText(newGame.getScramble());
+            }
+        }); ;
 
-        //
-            //changeText= findViewByID(R.id.changeText);
-            //changeText.setOnClickListener();
-        //
     }
 
 

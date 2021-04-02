@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.algogame.Object.Stack_Object;
 import com.example.algogame.Object.SubmitDialog;
 
-public class Stack_Game extends MainActivity {
+public class Stack_Game extends AppCompatActivity {
     TextView prompt;
     TextView scramble;
     TextView stack;

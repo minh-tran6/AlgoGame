@@ -43,6 +43,7 @@ public class getName extends AppCompatActivity {
                         intent.putExtra(EXTRA_NAME,user_name);
                         startActivity(intent);
                         finish();
+
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -52,9 +53,8 @@ public class getName extends AppCompatActivity {
                     }
                 });
                 builder.show();
-
-
             }
+
         });
     }
 

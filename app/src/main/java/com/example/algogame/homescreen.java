@@ -35,7 +35,7 @@ public class homescreen extends AppCompatActivity {
         stackgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newStackGame = new Intent(getApplicationContext(),PushandPop_Stack_Tutorial.class);
+                Intent newStackGame = new Intent(homescreen.this,PushandPop_Stack_Tutorial.class);
                 startActivity(newStackGame);
                 finish();
 
@@ -50,7 +50,7 @@ public class homescreen extends AppCompatActivity {
         queuegame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newQueueGame = new Intent(getApplicationContext(),Queue_Game.class);
+                Intent newQueueGame = new Intent(homescreen.this,Queue_Game.class);
                 startActivity(newQueueGame);
                 finish();
 
@@ -65,7 +65,7 @@ public class homescreen extends AppCompatActivity {
         sortgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newSortGame = new Intent(getApplicationContext(),Sort_Game.class);
+                Intent newSortGame = new Intent(homescreen.this,Sort_Game.class);
                 startActivity(newSortGame);
                 finish();
 
@@ -92,7 +92,7 @@ public class homescreen extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        System.exit(0);
+                        finish();
                     }
                 });
                 AlertDialog alert = builder.create();

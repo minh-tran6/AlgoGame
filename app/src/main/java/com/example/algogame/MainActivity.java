@@ -12,30 +12,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.concurrent.RunnableFuture;
 
-    Button button_get_name;
-    String user_name ;
-    EditText getName;
-    public static final String EXTRA_NAME = "name";
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getName = findViewById(R.id.getName);
-        button_get_name = findViewById(R.id.button_name);
-
-        button_get_name.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                user_name = getName.getText().toString();
-                Intent intent = new Intent( MainActivity.this, homescreen.class);
-                intent.putExtra(EXTRA_NAME,user_name);
-                startActivity(intent);
+            public void run() {
+                Intent splashscreen = new Intent(MainActivity.this, getName.class);
+                startActivity(splashscreen);
+                finish();
             }
-        });
+        },3000);
     }
 
 }

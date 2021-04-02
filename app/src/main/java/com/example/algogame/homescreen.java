@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class homescreen extends MainActivity {
+public class homescreen extends AppCompatActivity {
     Button stackgame;
     Button queuegame;
     Button sortgame;
@@ -24,8 +24,7 @@ public class homescreen extends MainActivity {
         setContentView(R.layout.activity_homescreen);
         textView = findViewById(R.id.player);
 
-        Intent intent = getIntent();
-        String new_name = intent.getStringExtra(homescreen.EXTRA_NAME);
+        String new_name = getIntent().getExtras().getString("name");
         textView.setText(new_name);
 
         //------------------------------------------------------------------------------
@@ -38,6 +37,8 @@ public class homescreen extends MainActivity {
             public void onClick(View v) {
                 Intent newStackGame = new Intent(getApplicationContext(),PushandPop_Stack_Tutorial.class);
                 startActivity(newStackGame);
+                finish();
+
             }
         });
 
@@ -51,6 +52,8 @@ public class homescreen extends MainActivity {
             public void onClick(View v) {
                 Intent newQueueGame = new Intent(getApplicationContext(),Queue_Game.class);
                 startActivity(newQueueGame);
+                finish();
+
             }
         });
 
@@ -64,6 +67,8 @@ public class homescreen extends MainActivity {
             public void onClick(View v) {
                 Intent newSortGame = new Intent(getApplicationContext(),Sort_Game.class);
                 startActivity(newSortGame);
+                finish();
+
             }
         });
 
@@ -98,33 +103,4 @@ public class homescreen extends MainActivity {
         //------------------------------------------------------------------------------
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }

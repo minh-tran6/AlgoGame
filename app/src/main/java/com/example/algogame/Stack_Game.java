@@ -20,6 +20,7 @@ public class Stack_Game extends MainActivity {
     TextView resultText;
 
     Button push_button;
+    Button pop_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,23 +40,34 @@ public class Stack_Game extends MainActivity {
         resultText = findViewById(R.id.resultText);
 
         push_button = findViewById(R.id.push_button);
+        pop_button = findViewById(R.id.pop_button);
 
         //Generating Prompt
-            String bufferPrompt = "BIKECYCLE";
-            promptText.setText(newGame.getPrompt(1));
+        String bufferPrompt = "BIKECYCLE";
+        promptText.setText(newGame.getPrompt(1));
 
         //Scramble Text
-            newGame.setScramble();
-            scrambleText = findViewById((R.id.scrambleText));
-            scrambleText.setText(newGame.getScramble());
+        newGame.setScramble();
+        scrambleText = findViewById((R.id.scrambleText));
+        scrambleText.setText(newGame.getScramble());
 
         push_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                newGame.setStack();
                 stackText.setText(newGame.getStack());
                 scrambleText.setText(newGame.getScramble());
             }
         }); ;
+
+        pop_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newGame.setResult();
+                resultText.setText(newGame.getResult());
+                stackText.setText(newGame.getStack());
+            }
+        });
 
     }
 

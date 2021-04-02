@@ -14,6 +14,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="BIKECYCLE"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -100,6 +102,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="EBKIYCELC"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/stackText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/promptText"
@@ -128,13 +131,13 @@
         app:layout_constraintTop_toBottomOf="@+id/resultText" />
 
     <Button
-        android:id="@+id/instructionStack_button"
+        android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginBottom="50dp"
-        android:text="INSTRUCTION"
+        android:text="RESET"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -142,8 +145,8 @@
         android:id="@+id/submitStack_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="50dp"
         android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"

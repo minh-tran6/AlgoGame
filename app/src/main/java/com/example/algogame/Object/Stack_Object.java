@@ -33,24 +33,15 @@ public class Stack_Object {
 
     public void setScramble()
     {
-        //EBKIYCELC
-//        scramble.push("C");
-//        scramble.push("L");
-//        scramble.push("E");
-//        scramble.push("C");
-//        scramble.push("Y");
-//        scramble.push("I");
-//        scramble.push("K");
-//        scramble.push("B");
-//        scramble.push("E");
         Stack<String> generate = new Stack<String>();
         int randomNumber;
         int startFromLeft=0;
-        int startFromRight=prompt.length()-1;
         while(!generate.isEmpty() || startFromLeft!=prompt.length())
         {
-            randomNumber = rand.nextInt(2);
-            if(randomNumber == 0)
+            //0 = push to gen
+            //1= pop from gen
+            randomNumber = rand.nextInt(3);
+            if(randomNumber == 0 || randomNumber == 1) //push to gen
             {
                 if(startFromLeft==prompt.length())
                 {
@@ -62,44 +53,23 @@ public class Stack_Object {
                     startFromLeft++;
                 }
             }
-            else
+            else //pop to gen
             {
-                if(generate.size()==0)
+                if(generate.size()==0) //If nothing to pop, then push word to gen
                 {
                     generate.push(prompt.substring(startFromLeft,startFromLeft+1));
                     startFromLeft++;
                 }
                 else {
-                    scramble.push(generate.get(generate.size() - 1));
-                    generate.pop();
+                    while(generate.size()!=0) {
+                        scramble.push(generate.get(generate.size() - 1));
+                        generate.pop();
+                    }
                 }
 
             }
         }
-//        for(int i=0;i<prompt.length();i++)
-//        {
-//            randomNumber = rand.nextInt(2);
-//            if(randomNumber==0)
-//            {
-//                if(!generate.isEmpty())
-//                {
-//                    scramble.push(generate.get(0));
-//                    generate.pop();
-//                }
-//                generate.push(prompt.substring(startFromLeft,startFromLeft+1));
-//                startFromLeft++;
-//            }
-//            else
-//            {
-//                scramble.push(prompt.substring(startFromLeft,startFromLeft+1));
-//                startFromLeft++;
-//            }
-//        }
-//        if(!generate.isEmpty())
-//        {
-//            scramble.push(generate.get(0));
-//            generate.pop();
-//        }
+
     }
 
     public String getScramble()
@@ -122,7 +92,7 @@ public class Stack_Object {
         String stringStack="";
         for(int i=0;i<stack.size();i++)
         {
-            stringStack = stringStack + stack.get(i);
+            stringStack =  stack.get(i) + "\n" + stringStack;
         }
         return stringStack;
     }
@@ -141,6 +111,17 @@ public class Stack_Object {
             stringResult = stringResult + result.get(i);
         }
         return stringResult;
+    }
+    public boolean checkMatching()
+    {
+        if(prompt.equals(getResult()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 

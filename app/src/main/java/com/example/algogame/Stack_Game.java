@@ -21,6 +21,7 @@ public class Stack_Game extends MainActivity {
 
     Button push_button;
     Button pop_button;
+    Button submitStack_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class Stack_Game extends MainActivity {
 
         push_button = findViewById(R.id.push_button);
         pop_button = findViewById(R.id.pop_button);
+        submitStack_button = findViewById(R.id.submitStack_button);
 
         //Generating Prompt
         String bufferPrompt = "BIKECYCLE";
@@ -66,6 +68,13 @@ public class Stack_Game extends MainActivity {
                 newGame.setResult();
                 resultText.setText(newGame.getResult());
                 stackText.setText(newGame.getStack());
+            }
+        });
+
+        submitStack_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

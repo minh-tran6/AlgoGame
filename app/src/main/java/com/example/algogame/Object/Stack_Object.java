@@ -47,30 +47,59 @@ public class Stack_Object {
         int randomNumber;
         int startFromLeft=0;
         int startFromRight=prompt.length()-1;
-        for(int i=0;i<prompt.length();i++)
+        while(!generate.isEmpty() || startFromLeft!=prompt.length())
         {
             randomNumber = rand.nextInt(2);
-            if(randomNumber==0)
+            if(randomNumber == 0)
             {
-                if(!generate.isEmpty())
+                if(startFromLeft==prompt.length())
                 {
-                    scramble.push(generate.get(0));
+                    scramble.push(generate.get(generate.size() - 1));
                     generate.pop();
                 }
-                generate.push(prompt.substring(startFromLeft,startFromLeft+1));
-                startFromLeft++;
+                else {
+                    generate.push(prompt.substring(startFromLeft, startFromLeft + 1));
+                    startFromLeft++;
+                }
             }
             else
             {
-                scramble.push(prompt.substring(startFromLeft,startFromLeft+1));
-                startFromLeft++;
+                if(generate.size()==0)
+                {
+                    generate.push(prompt.substring(startFromLeft,startFromLeft+1));
+                    startFromLeft++;
+                }
+                else {
+                    scramble.push(generate.get(generate.size() - 1));
+                    generate.pop();
+                }
+
             }
         }
-        if(!generate.isEmpty())
-        {
-            scramble.push(generate.get(0));
-            generate.pop();
-        }
+//        for(int i=0;i<prompt.length();i++)
+//        {
+//            randomNumber = rand.nextInt(2);
+//            if(randomNumber==0)
+//            {
+//                if(!generate.isEmpty())
+//                {
+//                    scramble.push(generate.get(0));
+//                    generate.pop();
+//                }
+//                generate.push(prompt.substring(startFromLeft,startFromLeft+1));
+//                startFromLeft++;
+//            }
+//            else
+//            {
+//                scramble.push(prompt.substring(startFromLeft,startFromLeft+1));
+//                startFromLeft++;
+//            }
+//        }
+//        if(!generate.isEmpty())
+//        {
+//            scramble.push(generate.get(0));
+//            generate.pop();
+//        }
     }
 
     public String getScramble()
@@ -84,8 +113,8 @@ public class Stack_Object {
     }
     public void setStack()
     {
-        stack.push(scramble.get(scramble.size() - 1));
-        scramble.pop();
+        stack.push(scramble.get(0));
+        scramble.remove(0);
 
     }
     public String getStack()

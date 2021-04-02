@@ -112,5 +112,16 @@ public class Stack_Object {
         }
         return stringResult;
     }
+    public boolean checkMatching()
+    {
+        if(prompt.equals(getResult()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 

@@ -1,5 +1,6 @@
 package com.example.algogame;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.algogame.Object.Stack_Object;
+import com.example.algogame.Object.SubmitDialog;
 
 public class Stack_Game extends MainActivity {
     TextView prompt;
@@ -74,14 +76,22 @@ public class Stack_Game extends MainActivity {
         submitStack_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(newGame.checkMatching()) {
+                    openDialog();
+                }
+                else
+                {
 
+                }
             }
         });
 
     }
 
-
-
+    private void openDialog() {
+        SubmitDialog submitDialog = new SubmitDialog();
+        submitDialog.show(getSupportFragmentManager(),"submitDialog");
+    }
 
 
 }

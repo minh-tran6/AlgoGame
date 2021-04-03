@@ -21,6 +21,7 @@ public class PushandPop_Stack_Tutorial extends AppCompatActivity {
             public void onClick(View v) {
                 Intent newGame = new Intent(getApplicationContext(),Stack_Game.class);
                 startActivity(newGame);
+                finish();
             }
         });
     }

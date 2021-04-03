@@ -10,7 +10,7 @@ public class Stack_Object {
     Stack<String> result = new Stack<String>();
     Random rand = new Random();
     String[] library =
-            {"BICYCLE","UMBRELLA","ALLIGATOR","CRYSTALLINE","TERMITE", "DOLPHIN",
+            {"BIKECYCLE","UMBRELLA","ALLIGATOR","CRYSTALLINE","TERMITE", "DOLPHIN",
                     "CUCUMBER","SENTENCE","PUNISHMENT","SPIDER", "AFRICAN","GOVERNMENT",
                     "LEGENDARY","JAPANESE","SPANISH","MADAGASCAR","PURPOSE","COMPANY",
                     "EXAMPLE","COUNTRY","PROBLEM","INTEREST","RESEARCH","EVIDENCE",

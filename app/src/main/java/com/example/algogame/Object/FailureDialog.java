@@ -9,19 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class SubmitDialog extends AppCompatDialogFragment {
+public class FailureDialog extends AppCompatDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Congratulations!")
-                .setMessage("Matching!")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
+        builder.setTitle("NOT MATCH")
+                .setMessage("You're gonna WIN. We know it!");
         return builder.create();
     }
 }
+

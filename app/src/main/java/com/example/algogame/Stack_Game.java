@@ -1,17 +1,19 @@
 package com.example.algogame;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.algogame.Object.FailureDialog;
 import com.example.algogame.Object.Stack_Object;
-import com.example.algogame.Object.SubmitDialog;
+import com.example.algogame.Object.SuccessDialog;
 
-public class Stack_Game extends AppCompatActivity {
+public class Stack_Game extends AppCompatActivity  {
     TextView prompt;
     TextView scramble;
     TextView stack;
@@ -77,21 +79,41 @@ public class Stack_Game extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(newGame.checkMatching()) {
-                    openDialog();
+                    openDialog(0);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    },4000);
                 }
                 else
                 {
-
+                    openDialog(1);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    },4000);
                 }
+
             }
         });
 
     }
 
-    private void openDialog() {
-        SubmitDialog submitDialog = new SubmitDialog();
-        submitDialog.show(getSupportFragmentManager(),"submitDialog");
+    private void openDialog(int i) {
+        if(i==0) {
+            SuccessDialog successDialog = new SuccessDialog();
+            successDialog.show(getSupportFragmentManager(), "successDialog");
+        }
+        else
+        {
+            FailureDialog failureDialog = new FailureDialog();
+            failureDialog.show(getSupportFragmentManager(),"failureDialog");
+        }
     }
 
-
+//
 }

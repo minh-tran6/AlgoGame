@@ -37,7 +37,7 @@ public class homescreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent newStackGame = new Intent(homescreen.this,PushandPop_Stack_Tutorial.class);
                 startActivity(newStackGame);
-                finish();
+
 
             }
         });
@@ -52,7 +52,7 @@ public class homescreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent newQueueGame = new Intent(homescreen.this,Queue_Game.class);
                 startActivity(newQueueGame);
-                finish();
+
 
             }
         });
@@ -67,7 +67,7 @@ public class homescreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent newSortGame = new Intent(homescreen.this,Sort_Game.class);
                 startActivity(newSortGame);
-                finish();
+
 
             }
         });

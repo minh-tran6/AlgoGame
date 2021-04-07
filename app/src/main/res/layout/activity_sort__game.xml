@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.223"
-        app:srcCompat="@drawable/DropZone_Sort" />
+        app:srcCompat="@drawable/dropzone_sort" />
 
     <ImageView
         android:id="@+id/dropZone_2"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.236"
-        app:srcCompat="@drawable/DropZone_Sort" />
+        app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
         android:id="@+id/number_text"
@@ -66,7 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/sortingQuestion" />
+        app:srcCompat="@drawable/sortingquestion" />
 
     <TextView
         android:id="@+id/textView"
@@ -90,7 +90,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/SortingInsertionQues" />
+        app:srcCompat="@drawable/sortinginsertionques" />
 
     <TextView
         android:id="@+id/textView2"

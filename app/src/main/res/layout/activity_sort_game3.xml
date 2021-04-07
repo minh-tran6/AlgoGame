@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.278"
-        app:srcCompat="@drawable/DropZone_Sort" />
+        app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
         android:id="@+id/sAns"
@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.278"
-        app:srcCompat="@drawable/DropZone_Sort" />
+        app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
         android:id="@+id/SelectionSort"
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.152"
-        app:srcCompat="@drawable/SelectionQuestion" />
+        app:srcCompat="@drawable/selectionquestion" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -105,5 +105,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.286"
-        app:srcCompat="@drawable/SelectionSortQ2" />
+        app:srcCompat="@drawable/selectionsortq2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

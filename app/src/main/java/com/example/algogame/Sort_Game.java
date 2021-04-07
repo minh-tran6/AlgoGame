@@ -14,14 +14,15 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class Sort_Game extends AppCompatActivity {
- int flag = 0;
- int random = new Random().nextInt((3-1)+1)+1;
- TextView text1;
 
+    int flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Setting layout randomly
         super.onCreate(savedInstanceState);
+        //int flag;
+        int random = new Random().nextInt((3-1)+1)+1;
+        TextView text1;
         if(random == 1)
         {
             setContentView(R.layout.activity_sort__game);
@@ -122,6 +123,7 @@ public class Sort_Game extends AppCompatActivity {
         });
 
 
+
     }
     //On click lister to act on long click. This will start the drag
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
@@ -153,8 +155,8 @@ public class Sort_Game extends AppCompatActivity {
                 case DragEvent.ACTION_DROP:
                     flag = 1;
                     view.animate()
-                            .x(text1.getX())
-                            .y(text1.getY())
+                            .x(view.getX())
+                            .y(view.getY())
                             .setDuration(700)
                             .start();
                     break;
@@ -180,8 +182,8 @@ public class Sort_Game extends AppCompatActivity {
                 case DragEvent.ACTION_DROP:
                     flag = 2;
                     view.animate()
-                            .x(text1.getX())
-                            .y(text1.getY())
+                            .x(view.getX())
+                            .y(view.getY())
                             .setDuration(700)
                             .start();
                     break;
@@ -190,4 +192,5 @@ public class Sort_Game extends AppCompatActivity {
             return true;
         }
     };
+
 }

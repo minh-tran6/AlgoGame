@@ -6,6 +6,7 @@ import java.util.Stack;
 public class Stack_Object {
     String prompt;
     Stack<String> scramble = new Stack<String>();
+    Stack<String> scrambleCopy = new Stack<String>();
     Stack<String> stack = new Stack<String>();
     Stack<String> result = new Stack<String>();
     Random rand = new Random();
@@ -69,7 +70,20 @@ public class Stack_Object {
 
             }
         }
+        scrambleCopy = (Stack<String>) scramble.clone();
+    }
 
+    public void reset()
+    {
+        scramble = (Stack<String>) scrambleCopy.clone();
+        while(!stack.isEmpty())
+        {
+            stack.pop();
+        }
+        while(!result.isEmpty())
+        {
+            result.pop();
+        }
     }
 
     public String getScramble()
@@ -83,8 +97,10 @@ public class Stack_Object {
     }
     public void setStack()
     {
-        stack.push(scramble.get(0));
-        scramble.remove(0);
+        if(!scramble.isEmpty()) {
+            stack.push(scramble.get(0));
+            scramble.remove(0);
+        }
 
     }
     public String getStack()
@@ -99,8 +115,10 @@ public class Stack_Object {
 
     public void setResult()
     {
-        result.push(stack.get(stack.size()-1));
-        stack.pop();
+        if(!stack.isEmpty()) {
+            result.push(stack.get(stack.size() - 1));
+            stack.pop();
+        }
     }
 
     public String getResult()

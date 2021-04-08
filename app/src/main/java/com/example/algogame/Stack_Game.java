@@ -26,6 +26,7 @@ public class Stack_Game extends AppCompatActivity  {
     Button push_button;
     Button pop_button;
     Button submitStack_button;
+    Button reset_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class Stack_Game extends AppCompatActivity  {
         push_button = findViewById(R.id.push_button);
         pop_button = findViewById(R.id.pop_button);
         submitStack_button = findViewById(R.id.submitStack_button);
+        reset_button = findViewById(R.id.reset_button);
 
         //Generating Prompt
         String bufferPrompt = "BIKECYCLE";
@@ -101,6 +103,15 @@ public class Stack_Game extends AppCompatActivity  {
             }
         });
 
+        reset_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newGame.reset();
+                scrambleText.setText(newGame.getScramble());
+                stackText.setText(newGame.getStack());
+                resultText.setText(newGame.getResult());
+            }
+        });
     }
 
     private void openDialog(int i) {

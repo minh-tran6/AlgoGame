@@ -26,11 +26,12 @@
 
     <Button
         android:id="@+id/start_button_stack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/scrollView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
-        android:text="Start" />
+        android:background="@drawable/start_button_resource"
+        app:backgroundTint="@null" />
 </RelativeLayout>

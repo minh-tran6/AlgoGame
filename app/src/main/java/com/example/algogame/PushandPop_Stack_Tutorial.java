@@ -27,7 +27,8 @@ public class PushandPop_Stack_Tutorial extends AppCompatActivity {
             }
         });
         textInScroll = findViewById(R.id.textInScroll);
-        textInScroll.setText("Your goal is to make scramble word to become prompt word.\n" +
+        textInScroll.setText("Your  goal is to make scramble word to become prompt word.\n" +
+                "\n" +
                 "\n" +
                 "1. PUSH : move first letter of Scramble to the Stack until there is no more letters left in Scramble.\n" +
                 "2. POP : move the top letter from the Stack to Result until there is no more letters left in Stack.\n" +

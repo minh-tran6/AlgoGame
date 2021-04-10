@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
@@ -22,11 +23,16 @@ public class Stack_Game extends AppCompatActivity  {
     TextView scrambleText;
     TextView stackText;
     TextView resultText;
+    TextView countDownTimer;
 
     Button push_button;
     Button pop_button;
     Button submitStack_button;
     Button reset_button;
+
+    String timerFront = "00:";
+    String timerEnd;
+    int value = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,7 @@ public class Stack_Game extends AppCompatActivity  {
         setContentView(R.layout.activity_stack__game);
 
         Stack_Object newGame = new Stack_Object();
+
 
         prompt = findViewById(R.id.prompt);
         scramble = findViewById(R.id.scramble);
@@ -44,11 +51,50 @@ public class Stack_Game extends AppCompatActivity  {
         scrambleText = findViewById(R.id.scrambleText);
         stackText = findViewById(R.id.stackText);
         resultText = findViewById(R.id.resultText);
+        countDownTimer = findViewById(R.id.countDownTimer);
 
         push_button = findViewById(R.id.push_button);
         pop_button = findViewById(R.id.pop_button);
         submitStack_button = findViewById(R.id.submitStack_button);
         reset_button = findViewById(R.id.reset_button);
+
+        new CountDownTimer((value+1)*1000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if(value<10)
+                {
+                    timerEnd = "0"+String.valueOf(value);
+                }
+                else {
+                    timerEnd = String.valueOf(value);
+                }
+                countDownTimer.setText(timerFront+timerEnd);
+                value--;
+            }
+
+            @Override
+            public void onFinish() {
+                if(newGame.checkMatching()) {
+                    openDialog(0);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    },4000);
+                }
+                else
+                {
+                    openDialog(1);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    },4000);
+                }
+            }
+        }.start();
 
         //Generating Prompt
         String bufferPrompt = "BIKECYCLE";

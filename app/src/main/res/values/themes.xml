@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <!-- FONT -->
         <item name="android:fontFamily">@font/arcade</item>
+        <item name="android:textSize">20dp</item>
     </style>
 </resources>

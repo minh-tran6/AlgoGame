@@ -67,6 +67,7 @@
         android:layout_marginRight="124dp"
         android:layout_marginBottom="288dp"
         android:text="QUEUE GAME"
+        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -79,6 +80,7 @@
         android:layout_marginRight="124dp"
         android:layout_marginBottom="380dp"
         android:text="STACK GAME"
+        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -91,6 +93,7 @@
         android:layout_marginRight="124dp"
         android:layout_marginBottom="200dp"
         android:text="SORT GAME"
+        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -103,6 +106,7 @@
         android:layout_marginRight="124dp"
         android:layout_marginBottom="100dp"
         android:text="EXIT"
+        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

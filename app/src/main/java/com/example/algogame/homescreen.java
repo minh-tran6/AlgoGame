@@ -50,7 +50,7 @@ public class homescreen extends AppCompatActivity {
         queuegame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newQueueGame = new Intent(homescreen.this,Queue_Game.class);
+                Intent newQueueGame = new Intent(homescreen.this,QueueandDequeue_Queue_Tutorial.class);
                 startActivity(newQueueGame);
 
 

@@ -14,7 +14,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="BIKECYCLE"
-        android:textSize="14sp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,11 +29,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stackText"
+        app:layout_constraintTop_toBottomOf="@+id/scrambleText"
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/stackText"
+        android:id="@+id/scrambleText"
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:layout_marginTop="50dp"
@@ -41,7 +41,7 @@
         android:layout_marginRight="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrambleText" />
+        app:layout_constraintTop_toBottomOf="@+id/robotText" />
 
     <TextView
         android:id="@+id/prompt"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/scramble"
+        android:id="@+id/robot"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:layout_marginStart="50dp"
@@ -69,17 +69,17 @@
         app:layout_constraintTop_toBottomOf="@+id/prompt" />
 
     <TextView
-        android:id="@+id/stack"
+        android:id="@+id/scramble"
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:text="Stack"
-        app:layout_constraintEnd_toEndOf="@+id/scramble"
+        app:layout_constraintEnd_toEndOf="@+id/robot"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scramble" />
+        app:layout_constraintTop_toBottomOf="@+id/robot" />
 
     <TextView
         android:id="@+id/result"
@@ -93,11 +93,11 @@
         app:layout_constraintEnd_toStartOf="@+id/resultText"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stack"
+        app:layout_constraintTop_toBottomOf="@+id/scramble"
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/scrambleText"
+        android:id="@+id/robotText"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:layout_marginTop="50dp"
@@ -105,7 +105,7 @@
         android:layout_marginRight="50dp"
         android:text="EBKIYCELC"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/stackText"
+        app:layout_constraintBottom_toTopOf="@+id/scrambleText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/promptText"
         app:layout_constraintVertical_bias="0.0" />
@@ -147,7 +147,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/submitStack_button"
+        android:id="@+id/submitQueue_button"
         android:layout_width="83dp"
         android:layout_height="50dp"
         android:layout_marginEnd="100dp"

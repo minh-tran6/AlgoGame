@@ -2,7 +2,6 @@ package com.example.algogame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -32,7 +31,8 @@ public class Stack_Game extends AppCompatActivity  {
 
     String timerFront = "00:";
     String timerEnd;
-    int value = 5;
+    CountDownTimer timer;
+    int value = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,22 +43,22 @@ public class Stack_Game extends AppCompatActivity  {
 
 
         prompt = findViewById(R.id.prompt);
-        scramble = findViewById(R.id.scramble);
-        stack = findViewById(R.id.stack);
+        scramble = findViewById(R.id.robot);
+        stack = findViewById(R.id.scramble);
         result = findViewById(R.id.result);
 
         promptText = findViewById(R.id.promptText);
-        scrambleText = findViewById(R.id.scrambleText);
-        stackText = findViewById(R.id.stackText);
+        scrambleText = findViewById(R.id.robotText);
+        stackText = findViewById(R.id.scrambleText);
         resultText = findViewById(R.id.resultText);
         countDownTimer = findViewById(R.id.countDownTimer);
 
         push_button = findViewById(R.id.push_button);
         pop_button = findViewById(R.id.pop_button);
-        submitStack_button = findViewById(R.id.submitStack_button);
+        submitStack_button = findViewById(R.id.submitQueue_button);
         reset_button = findViewById(R.id.reset_button);
 
-        new CountDownTimer((value+1)*1000, 1000) {
+        timer = new CountDownTimer((value+1)*1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if(value<10)
@@ -74,6 +74,7 @@ public class Stack_Game extends AppCompatActivity  {
 
             @Override
             public void onFinish() {
+                timer.cancel();
                 if(newGame.checkMatching()) {
                     openDialog(0);
                     new Handler().postDelayed(new Runnable() {
@@ -102,7 +103,7 @@ public class Stack_Game extends AppCompatActivity  {
 
         //Scramble Text
         newGame.setScramble();
-        scrambleText = findViewById((R.id.scrambleText));
+        scrambleText = findViewById((R.id.robotText));
         scrambleText.setText(newGame.getScramble());
 
         push_button.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +127,7 @@ public class Stack_Game extends AppCompatActivity  {
         submitStack_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timer.cancel();
                 if(newGame.checkMatching()) {
                     openDialog(0);
                     new Handler().postDelayed(new Runnable() {
@@ -145,7 +147,6 @@ public class Stack_Game extends AppCompatActivity  {
                         }
                     },4000);
                 }
-
             }
         });
 
@@ -172,5 +173,9 @@ public class Stack_Game extends AppCompatActivity  {
         }
     }
 
-//
+    @Override
+    public void onBackPressed() {
+        timer.cancel();
+        super.onBackPressed();
+    }
 }

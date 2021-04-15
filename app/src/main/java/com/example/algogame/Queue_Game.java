@@ -25,15 +25,16 @@ public class Queue_Game extends AppCompatActivity {
     TextView resultText;
     TextView countDownTimer;
 
-    Button push_button;
-    Button pop_button;
+    Button left_button;
+    Button right_button;
+    Button down_button;
     Button submitQueue_button;
     Button reset_button;
 
     String timerFront = "00:";
     String timerEnd;
     CountDownTimer timer;
-    int value = 20;
+    int value = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +54,9 @@ public class Queue_Game extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
         countDownTimer = findViewById(R.id.countDownTimer);
 
-        push_button = findViewById(R.id.push_button);
-        pop_button = findViewById(R.id.pop_button);
+        left_button = findViewById(R.id.left_button);
+        right_button = findViewById(R.id.right_button);
+        down_button = findViewById(R.id.down_button);
         submitQueue_button = findViewById(R.id.submitQueue_button);
         reset_button = findViewById(R.id.reset_button);
 
@@ -104,20 +106,30 @@ public class Queue_Game extends AppCompatActivity {
 
         //Robot Text
         robotText = findViewById((R.id.robotText));
-        robotText.setText("");
+        newGame.setRobot();
+        robotText.setText(newGame.getRobot());
 
         //Scramble Text
         newGame.setScramble();
         scrambleText.setText(newGame.getScramble());
 
-        push_button.setOnClickListener(new View.OnClickListener() {
+        left_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                newGame.leftRobot();
+                robotText.setText(newGame.getRobot());
             }
         }); ;
 
-        pop_button.setOnClickListener(new View.OnClickListener() {
+        right_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newGame.rightRobot();
+                robotText.setText(newGame.getRobot());
+            }
+        });
+
+        down_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

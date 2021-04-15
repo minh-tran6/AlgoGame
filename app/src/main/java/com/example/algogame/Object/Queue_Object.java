@@ -15,6 +15,7 @@ public class Queue_Object {
     String scramble="";
     Stack<String> scrambleCopy = new Stack<String>();
     Stack<String> result = new Stack<String>();
+    Stack <Character> robotStack = new Stack<Character>();
     Random rand = new Random();
     String[] library =
             {"BIKECYCLE","UMBRELLA","ALLIGATOR","CRYSTALLINE","TERMITE", "DOLPHIN",
@@ -118,10 +119,29 @@ public class Queue_Object {
         scramble = String.valueOf(Arrays.copyOf(str,index));
         return scramble;
     }
+
     public void setRobot()
     {
+        robotStack.push('-');
+    }
 
+    public void rightRobot()
+    {
+        robotStack.push('O');
+    }
+    public void leftRobot()
+    {
+        robotStack.pop();
+    }
 
+    public String getRobot()
+    {
+        String robot = "";
+        for(int i=robotStack.size()-1;i>-1;i--)
+        {
+            robot = robot + robotStack.get(i);
+        }
+        return robot;
     }
 
     public void setResult()

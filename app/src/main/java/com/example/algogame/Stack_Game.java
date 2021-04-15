@@ -53,8 +53,8 @@ public class Stack_Game extends AppCompatActivity  {
         resultText = findViewById(R.id.resultText);
         countDownTimer = findViewById(R.id.countDownTimer);
 
-        push_button = findViewById(R.id.push_button);
-        pop_button = findViewById(R.id.pop_button);
+        push_button = findViewById(R.id.left_button);
+        pop_button = findViewById(R.id.right_button);
         submitStack_button = findViewById(R.id.submitQueue_button);
         reset_button = findViewById(R.id.reset_button);
 

@@ -24,6 +24,7 @@ public class Queue_Game extends AppCompatActivity {
     TextView robotText;
     TextView resultText;
     TextView countDownTimer;
+    TextView QueueText;
 
     Button left_button;
     Button right_button;
@@ -53,6 +54,7 @@ public class Queue_Game extends AppCompatActivity {
         scrambleText = findViewById(R.id.scrambleText);
         resultText = findViewById(R.id.resultText);
         countDownTimer = findViewById(R.id.countDownTimer);
+        QueueText = findViewById(R.id.QueueText);
 
         left_button = findViewById(R.id.left_button);
         right_button = findViewById(R.id.right_button);
@@ -118,6 +120,7 @@ public class Queue_Game extends AppCompatActivity {
             public void onClick(View v) {
                 newGame.leftRobot();
                 robotText.setText(newGame.getRobot());
+                QueueText.setText(newGame.getDirection());
             }
         }); ;
 
@@ -126,39 +129,62 @@ public class Queue_Game extends AppCompatActivity {
             public void onClick(View v) {
                 newGame.rightRobot();
                 robotText.setText(newGame.getRobot());
+                QueueText.setText(newGame.getDirection());
             }
         });
 
         down_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                newGame.downRobot();
+                QueueText.setText(newGame.getDirection());
             }
         });
 
         submitQueue_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                newGame.clearRobot();
+                newGame.setRobot();
+                robotText.setText(newGame.getRobot());
                 timer.cancel();
-                if(newGame.checkMatching()) {
-                    openDialog(0);
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            finish();
+
+                Handler handler = new Handler();
+                Runnable runnable = new Runnable() {
+                    @Override
+                    public void run() {
+                        newGame.performDirection();
+                        robotText.setText(newGame.getRobot());
+                        resultText.setText(newGame.getResult());
+                        QueueText.setText(newGame.getDirection());
+                        handler.postDelayed(this,3000);
+
+                        if(newGame.getDirectionSize()==0) {
+                            robotText.setText(newGame.getRobot());
+                            resultText.setText(newGame.getResult());
+                            QueueText.setText(newGame.getDirection());
+
+                            if (newGame.checkMatching()) {
+                                openDialog(0);
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        finish();
+                                    }
+                                }, 4000);
+                            } else {
+                                openDialog(1);
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        finish();
+                                    }
+                                }, 4000);
+                            }
                         }
-                    },4000);
-                }
-                else
-                {
-                    openDialog(1);
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            finish();
-                        }
-                    },4000);
-                }
+                    }
+                };
+                runnable.run();
             }
         });
 

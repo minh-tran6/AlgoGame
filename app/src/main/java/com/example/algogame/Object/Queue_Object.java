@@ -3,11 +3,18 @@ package com.example.algogame.Object;
 import android.text.Layout;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Random;
 import java.util.Stack;
+import java.util.logging.Handler;
 
 public class Queue_Object {
     String prompt;
@@ -16,22 +23,12 @@ public class Queue_Object {
     Stack<String> scrambleCopy = new Stack<String>();
     Stack<String> result = new Stack<String>();
     Stack <Character> robotStack = new Stack<Character>();
+    Stack<String> direction = new Stack<String>();
+    int index=0;
+
     Random rand = new Random();
     String[] library =
-            {"BIKECYCLE","UMBRELLA","ALLIGATOR","CRYSTALLINE","TERMITE", "DOLPHIN",
-                    "CUCUMBER","SENTENCE","PUNISHMENT","SPIDER", "AFRICAN","GOVERNMENT",
-                    "LEGENDARY","JAPANESE","SPANISH","MADAGASCAR","PURPOSE","COMPANY",
-                    "EXAMPLE","COUNTRY","PROBLEM","INTEREST","RESEARCH","EVIDENCE",
-                    "LANGUAGE","PRACTICE","DECISION","HOSPITAL","COMPUTER","MOVEMENT",
-                    "ANALYSIS","MATERIAL","PRESSURE","ACTIVITY","MAJORITY","SOFTWARE",
-                    "DAUGHTER","CAMPAIGN","INSTANCE","ARGUMENT","EXCHANGE","MARRIAGE",
-                    "SOLUTION","ACCIDENT","EXERCISE","STRATEGY","VIOLENCE","EMPHASIS",
-                    "AUDIENCE","PLEASURE","MAGAZINE","APPROVAL","DELIVERY","CURRENCY",
-                    "EDUCATION","COMMUNITY","COMMITTEE","PROGRAMME","AUTHORITY","PRESIDENT",
-                    "SITUATION","SECRETARY","KNOWLEDGE","STRUCTURE","ATTENTION","AGREEMENT",
-                    "BEHAVIOUR","TREATMENT","OPERATION","STATEMENT","EQUIPMENT","CHARACTER",
-                    "PRINCIPLE","AFTERNOON","EXISTENCE","ADVANTAGE","INSURANCE","TELEPHONE",
-                    "NEWSPAPER","CRITICISM","INFLATION","TECHNIQUE","BREAKFAST","FRAMEWORK"};
+            {"GAME","STOP"};
 
     public String getPrompt(int i)
     {
@@ -122,16 +119,22 @@ public class Queue_Object {
 
     public void setRobot()
     {
-        robotStack.push('-');
+        robotStack.push('|');
     }
 
     public void rightRobot()
     {
-        robotStack.push('O');
+        robotStack.push('=');
+        direction.push("RIGHT");
     }
     public void leftRobot()
     {
         robotStack.pop();
+        direction.push("LEFT");
+    }
+    public void downRobot()
+    {
+        direction.push("DOWN");
     }
 
     public String getRobot()
@@ -142,6 +145,49 @@ public class Queue_Object {
             robot = robot + robotStack.get(i);
         }
         return robot;
+    }
+
+    public void clearRobot()
+    {
+        while(!robotStack.isEmpty())
+        {
+            robotStack.pop();
+        }
+    }
+
+    public String getDirection()
+    {
+        String stringStack="";
+        for(int i=0;i<direction.size();i++)
+        {
+            stringStack = direction.get(i) + "\n" + stringStack;
+        }
+        return stringStack;
+    }
+
+    public int getDirectionSize()
+    {
+        return direction.size();
+    }
+
+    public void performDirection()
+    {
+        String direct = direction.get(0);
+        if(direct == "LEFT")
+        {
+            robotStack.pop();
+            index--;
+        }
+        else if(direct == "RIGHT")
+        {
+            robotStack.push('=');
+            index++;
+        }
+        else
+        {
+            result.push(scramble.substring(index,index+1));
+        }
+        direction.remove(0);
     }
 
     public void setResult()

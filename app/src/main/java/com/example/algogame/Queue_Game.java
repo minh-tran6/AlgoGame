@@ -2,9 +2,13 @@ package com.example.algogame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -153,7 +157,15 @@ public class Queue_Game extends AppCompatActivity {
                 Runnable runnable = new Runnable() {
                     @Override
                     public void run() {
-                        newGame.performDirection();
+                        int index = newGame.performDirection();
+
+                        String highlight = newGame.getScramble();
+                        SpannableString ss = new SpannableString(highlight);
+
+                        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
+                        ss.setSpan(fcsRed,index,index+1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                        scrambleText.setText(ss);
                         robotText.setText(newGame.getRobot());
                         resultText.setText(newGame.getResult());
                         QueueText.setText(newGame.getDirection());

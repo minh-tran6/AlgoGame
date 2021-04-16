@@ -160,7 +160,13 @@ public class Queue_Object {
         String stringStack="";
         for(int i=0;i<direction.size();i++)
         {
-            stringStack = direction.get(i) + "\n" + stringStack;
+            if(i==0)
+            {
+                stringStack = "->" + direction.get(i) + "\n" + stringStack;
+            }
+            else {
+                stringStack = direction.get(i) + "\n" + stringStack;
+            }
         }
         return stringStack;
     }
@@ -170,7 +176,7 @@ public class Queue_Object {
         return direction.size();
     }
 
-    public void performDirection()
+    public int performDirection()
     {
         String direct = direction.get(0);
         if(direct == "LEFT")
@@ -188,11 +194,7 @@ public class Queue_Object {
             result.push(scramble.substring(index,index+1));
         }
         direction.remove(0);
-    }
-
-    public void setResult()
-    {
-
+        return index;
     }
 
     //Print Result

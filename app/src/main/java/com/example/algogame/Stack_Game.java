@@ -56,7 +56,7 @@ public class Stack_Game extends AppCompatActivity  {
         push_button = findViewById(R.id.left_button);
         pop_button = findViewById(R.id.right_button);
         submitStack_button = findViewById(R.id.submitQueue_button);
-        reset_button = findViewById(R.id.reset_button);
+        reset_button = findViewById(R.id.resetQueue_button);
 
         timer = new CountDownTimer((value+1)*1000, 1000) {
             @Override

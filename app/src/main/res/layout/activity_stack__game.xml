@@ -137,7 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/resultText" />
 
     <Button
-        android:id="@+id/reset_button"
+        android:id="@+id/resetQueue_button"
         android:layout_width="83dp"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"

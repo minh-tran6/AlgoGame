@@ -78,15 +78,6 @@ public class Queue_Object {
         scrambleCopy = (Stack<String>) bufferScramble.clone();
     }
 
-    public void reset()
-    {
-        bufferScramble = (Stack<String>) scrambleCopy.clone();
-        while(!result.isEmpty())
-        {
-            result.pop();
-        }
-    }
-
     public String getScramble()
     {
         for(int i=0;i<bufferScramble.size();i++)
@@ -124,13 +115,17 @@ public class Queue_Object {
 
     public void rightRobot()
     {
-        robotStack.push('=');
-        direction.push("RIGHT");
+        if(robotStack.size()<scramble.length()) {
+            robotStack.push('=');
+            direction.push("RIGHT");
+        }
     }
     public void leftRobot()
     {
-        robotStack.pop();
-        direction.push("LEFT");
+        if(robotStack.size()>1) {
+            robotStack.pop();
+            direction.push("LEFT");
+        }
     }
     public void downRobot()
     {
@@ -221,4 +216,15 @@ public class Queue_Object {
         }
     }
 
+    public void reset()
+    {
+        while(!direction.isEmpty())
+        {
+            direction.pop();
+        }
+        while(!robotStack.isEmpty())
+        {
+            robotStack.pop();
+        }
+    }
 }

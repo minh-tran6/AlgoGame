@@ -64,7 +64,7 @@ public class Queue_Game extends AppCompatActivity {
         right_button = findViewById(R.id.right_button);
         down_button = findViewById(R.id.down_button);
         submitQueue_button = findViewById(R.id.submitQueue_button);
-        reset_button = findViewById(R.id.reset_button);
+        reset_button = findViewById(R.id.resetQueue_button);
 
         timer = new CountDownTimer((value+1)*1000, 1000) {
             @Override
@@ -158,7 +158,6 @@ public class Queue_Game extends AppCompatActivity {
                     @Override
                     public void run() {
                         int index = newGame.performDirection();
-
                         String highlight = newGame.getScramble();
                         SpannableString ss = new SpannableString(highlight);
 
@@ -169,11 +168,15 @@ public class Queue_Game extends AppCompatActivity {
                         robotText.setText(newGame.getRobot());
                         resultText.setText(newGame.getResult());
                         QueueText.setText(newGame.getDirection());
-                        handler.postDelayed(this, 500);
+
+
+                        handler.postDelayed(this, 3000);
+
                         if(newGame.getDirectionSize()==0) {
-//                            robotText.setText(newGame.getRobot());
-//                            resultText.setText(newGame.getResult());
-//                            QueueText.setText(newGame.getDirection());
+                            robotText.setText(newGame.getRobot());
+                            resultText.setText(newGame.getResult());
+                            QueueText.setText(newGame.getDirection());
+                            handler.removeCallbacks(this);
                             if (newGame.checkMatching()) {
                                 openDialog(0);
                             } else {
@@ -184,19 +187,21 @@ public class Queue_Game extends AppCompatActivity {
                                 public void run() {
                                     finish();
                                 }
-                            }, 1000);
+                            }, 4000);
                         }
                     }
                 };
                 runnable.run();
-                handler.removeCallbacks(runnable);
+
             }
         });
 
         reset_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                newGame.reset();
+                robotText.setText(newGame.getRobot());
+                QueueText.setText(newGame.getDirection());
             }
         });
     }

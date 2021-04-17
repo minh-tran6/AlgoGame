@@ -169,34 +169,27 @@ public class Queue_Game extends AppCompatActivity {
                         robotText.setText(newGame.getRobot());
                         resultText.setText(newGame.getResult());
                         QueueText.setText(newGame.getDirection());
-                        handler.postDelayed(this,3000);
-
+                        handler.postDelayed(this, 500);
                         if(newGame.getDirectionSize()==0) {
-                            robotText.setText(newGame.getRobot());
-                            resultText.setText(newGame.getResult());
-                            QueueText.setText(newGame.getDirection());
-
+//                            robotText.setText(newGame.getRobot());
+//                            resultText.setText(newGame.getResult());
+//                            QueueText.setText(newGame.getDirection());
                             if (newGame.checkMatching()) {
                                 openDialog(0);
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        finish();
-                                    }
-                                }, 4000);
                             } else {
                                 openDialog(1);
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        finish();
-                                    }
-                                }, 4000);
                             }
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    finish();
+                                }
+                            }, 1000);
                         }
                     }
                 };
                 runnable.run();
+                handler.removeCallbacks(runnable);
             }
         });
 

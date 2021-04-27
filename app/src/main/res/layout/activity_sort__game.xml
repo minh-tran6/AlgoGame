@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sortBack"
     tools:context=".Sort_Game">
 
     <ImageView
@@ -37,14 +38,17 @@
         android:id="@+id/number_text"
         android:layout_width="46dp"
         android:layout_height="45dp"
+        android:background="#F44336"
         android:gravity="center"
         android:text="1"
+        android:textColor="#FFEB3B"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        app:layout_constraintVertical_bias="0.586" />
 
     <Button
         android:id="@+id/submit_button"
@@ -60,15 +64,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#9C27B0"
+        android:layout_width="402dp"
+        android:layout_height="59dp"
+        android:background="#009C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/sortingquestion" />
+        app:srcCompat="@drawable/InsertQuestion" />
 
     <TextView
         android:id="@+id/textView"
@@ -94,7 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/sortinginsertionques" />
+        app:srcCompat="@drawable/InsertQ2" />
 
     <TextView
         android:id="@+id/textView2"

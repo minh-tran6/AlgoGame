@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.view.DragEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,15 +26,26 @@ public class Sort_Game extends AppCompatActivity {
         TextView text1;
 
         //On click lister to act on long click. This will start the drag
-        View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+        View.OnTouchListener longClickListener = new View.OnTouchListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder myShadowBuilder = new View.DragShadowBuilder(v);
+                v.startDrag(data, myShadowBuilder, v, 0);
+                return true;
+            }
+        };
+/*
+            @Override
+            public boolean onTouch(View v) {
                 ClipData data = ClipData.newPlainText("","");
                 View.DragShadowBuilder myShadowBuilder = new View.DragShadowBuilder(v);
                 v.startDrag(data, myShadowBuilder,v, 0);
                 return true;
             }
         };
+        */
+
         //This will activate when the drag starts same for dragListener2. Based on the action the respective flag will be set
         //draglistener 1 is the correct dropzone while the other is wrong
         View.OnDragListener dragListener = new View.OnDragListener() {
@@ -132,7 +144,7 @@ public class Sort_Game extends AppCompatActivity {
             text1 = (TextView) findViewById(R.id.number_text);
 
             //Connecting number_text to longClickListener
-            text1.setOnLongClickListener(longClickListener);
+            text1.setOnTouchListener(longClickListener);
 
             //Initializing Views and flags text1 is global to ensure visibility
             //Insertion sort views
@@ -170,7 +182,7 @@ public class Sort_Game extends AppCompatActivity {
             text1 = (TextView) findViewById(R.id.bAns);
 
             //Connecting bAns to longClickListener
-            text1.setOnLongClickListener(longClickListener);
+            text1.setOnTouchListener(longClickListener);
 
             //Bubble sort views
             ImageView Bimg1 = (ImageView) findViewById(R.id.dropZone3);
@@ -204,7 +216,7 @@ public class Sort_Game extends AppCompatActivity {
             text1 = (TextView) findViewById(R.id.sAns);
 
             //Connecting sAns to longClickListener
-            text1.setOnLongClickListener(longClickListener);
+            text1.setOnTouchListener(longClickListener);
 
 
             //Selection sort views

@@ -35,14 +35,16 @@
 
     <Button
         android:id="@+id/sSub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
+        android:layout_width="234dp"
+        android:layout_height="103dp"
+        android:background="@drawable/submit_button_resource"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.909" />
 
     <ImageView
         android:id="@+id/dropZone5"
@@ -61,12 +63,14 @@
         android:id="@+id/SelectionSort"
         android:layout_width="362dp"
         android:layout_height="74dp"
+        android:background="#F44336"
         android:gravity="center"
         android:text="Selection Sort"
+        android:textColor="#FFEB3B"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024" />
@@ -75,8 +79,10 @@
         android:id="@+id/textView4"
         android:layout_width="289dp"
         android:layout_height="115dp"
+        android:background="#F44336"
         android:gravity="center"
         android:text="Assume this is the first step. Place 6 in the correct position and tap submit"
+        android:textColor="#FFEB3B"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

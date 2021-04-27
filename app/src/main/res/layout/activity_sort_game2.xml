@@ -23,8 +23,10 @@
         android:id="@+id/bubbleSort"
         android:layout_width="362dp"
         android:layout_height="74dp"
+        android:background="#F44336"
         android:gravity="center"
         android:text="Bubble Sort"
+        android:textColor="#FFEB3B"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,8 +75,10 @@
         android:id="@+id/textView3"
         android:layout_width="289dp"
         android:layout_height="115dp"
+        android:background="#F44336"
         android:gravity="center"
         android:text="Assume this is the first step. Place 2 in the correct position and tap submit"
+        android:textColor="#FFEB3B"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,14 +87,16 @@
 
     <Button
         android:id="@+id/bSub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
+        android:layout_width="206dp"
+        android:layout_height="90dp"
+        android:background="@drawable/submit_button_resource"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.913" />
 
     <TextView
         android:id="@+id/bAns"

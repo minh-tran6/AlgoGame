@@ -81,13 +81,19 @@ public class Sort_Game extends AppCompatActivity {
                         flag = 1;
                        // view.setX(event.getX());
                         //view.setY(event.getY());
-
+                        /*
                         view.animate()
-                                .x(drop.getX())
-                                .y(drop.getY())
+                                .x(event.getX())
+                                .y(event.getY())
                                 .setDuration(700)
                                 .start();
-
+                        */
+                        int[] location = new int[2];
+                        drop.getLocationOnScreen(location);
+                        int x = location[0];
+                        int y = location[1];
+                        view.setX(x);
+                        view.setY(y);
 
                         break;
                 }
@@ -126,11 +132,19 @@ public class Sort_Game extends AppCompatActivity {
                        // view.setX(event.getX());
                        // view.setY(event.getY());
 
+                       /*
                         view.animate()
-                                .x(drop.getX())
-                                .y(drop.getY())
+                                .x(event.getX())
+                                .y(event.getY())
                                 .setDuration(700)
                                 .start();
+                        */
+                        int[] location = new int[2];
+                        drop.getLocationOnScreen(location);
+                        int x = location[0];
+                        int y = location[1];
+                        view.setX(x);
+                        view.setY(y);
 
 
                         break;
@@ -225,8 +239,8 @@ public class Sort_Game extends AppCompatActivity {
             ImageView Simg2 = (ImageView) findViewById(R.id.dropZone6);
             Button subButS = (Button) findViewById(R.id.sSub);
             //Setting drop zones
-            Simg1.setOnDragListener(dragListener);
-            Simg2.setOnDragListener(dragListener2);
+            Simg1.setOnDragListener(dragListener2);
+            Simg2.setOnDragListener(dragListener);
 
             //Button for selection sort
             subButS.setOnClickListener(new View.OnClickListener() {

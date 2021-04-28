@@ -28,7 +28,15 @@ public class Queue_Object {
 
     Random rand = new Random();
     String[] library =
-            {"GAME","STOP"};
+            {"ABROAD","ACCEPT","ACTION","ADVICE","AFRAID","ANIMAL","ANYONE","AUTHOR",
+                    "BEAUTY","BECOME","BEYOND","BELIEF","BOTTLE","BORDER","BRANCH","BRIGHT",
+                    "CAMERA","CARBON","CLIENT","COLUMN","COPPER","COURSE","CREDIT","CRISIS",
+                    "DOCTOR","DOUBLE","DOLLAR","DEMAND","DECIDE","DEPEND","DAMAGE","DRIVER",
+                    "EDITOR","ENERGY","ESCAPE","EXPAND","ENGAGE","EFFORT","EATING","EASILY",
+                    "FABRIC","FACING","FACTOR","FAMOUS","FEMALE","FINISH","FLYING","FLIGHT",
+                    "GARDEN","GATHER","GLOBAL","GROUND","GOLDEN","GENDER","GERMAN","GUILTY"
+
+            };
 
     public String getPrompt(int i)
     {

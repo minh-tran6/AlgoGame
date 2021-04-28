@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sortBack"
+    android:background="@drawable/sortback"
     tools:context=".Sort_Game">
 
     <ImageView
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/InsertQuestion" />
+        app:srcCompat="@drawable/insertquestion" />
 
     <TextView
         android:id="@+id/textView"
@@ -98,7 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/InsertQ2" />
+        app:srcCompat="@drawable/insertq2" />
 
     <TextView
         android:id="@+id/textView2"

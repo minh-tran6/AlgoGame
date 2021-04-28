@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sortBack">
+    android:background="@drawable/sortback">
 
     <ImageView
         android:id="@+id/dropZone6"
@@ -101,7 +101,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.152"
-        app:srcCompat="@drawable/selectionQuestion" />
+        app:srcCompat="@drawable/selectionquestion" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -113,5 +113,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.286"
-        app:srcCompat="@drawable/selectionQ2" />
+        app:srcCompat="@drawable/selectionq2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

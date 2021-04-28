@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -24,7 +25,7 @@ public class Sort_Game extends AppCompatActivity {
         //int flag;
         int random = new Random().nextInt((3-1)+1)+1;
         TextView text1;
-
+        Log.i("myTag",random + "");
         //On click lister to act on long click. This will start the drag
         View.OnTouchListener longClickListener = new View.OnTouchListener() {
             @Override
@@ -224,8 +225,8 @@ public class Sort_Game extends AppCompatActivity {
             ImageView Simg2 = (ImageView) findViewById(R.id.dropZone6);
             Button subButS = (Button) findViewById(R.id.sSub);
             //Setting drop zones
-            Simg1.setOnDragListener(dragListener2);
-            Simg2.setOnDragListener(dragListener);
+            Simg1.setOnDragListener(dragListener);
+            Simg2.setOnDragListener(dragListener2);
 
             //Button for selection sort
             subButS.setOnClickListener(new View.OnClickListener() {

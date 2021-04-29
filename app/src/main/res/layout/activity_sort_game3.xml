@@ -6,17 +6,98 @@
     android:layout_height="match_parent"
     android:background="@drawable/sortback">
 
+    <TextView
+        android:id="@+id/bAns8"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns11"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns7"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns9"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns10"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
     <ImageView
         android:id="@+id/dropZone6"
         android:layout_width="77dp"
-        android:layout_height="81dp"
+        android:layout_height="65dp"
+        android:alpha="0"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298"
+        app:layout_constraintVertical_bias="0.268"
         app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
@@ -50,15 +131,16 @@
 
     <ImageView
         android:id="@+id/dropZone5"
-        android:layout_width="77dp"
-        android:layout_height="81dp"
+        android:layout_width="91dp"
+        android:layout_height="82dp"
+        android:alpha="0"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298"
+        app:layout_constraintVertical_bias="0.275"
         app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
@@ -103,15 +185,4 @@
         app:layout_constraintVertical_bias="0.152"
         app:srcCompat="@drawable/selectionquestion" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="202dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
-        app:srcCompat="@drawable/selectionq2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

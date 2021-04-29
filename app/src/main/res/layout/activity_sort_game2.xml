@@ -6,17 +6,97 @@
     android:layout_height="match_parent"
     android:background="@drawable/sortback">
 
+    <TextView
+        android:id="@+id/bAns5"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns4"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns3"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns6"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/bAns2"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#F44336"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
     <ImageView
         android:id="@+id/dropZone4"
-        android:layout_width="77dp"
-        android:layout_height="81dp"
+        android:layout_width="74dp"
+        android:layout_height="92dp"
+        android:alpha="0"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
+        app:layout_constraintVertical_bias="0.273"
         app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView
@@ -49,28 +129,17 @@
         app:srcCompat="@drawable/insertquestion" />
 
     <ImageView
-        android:id="@+id/bQ"
-        android:layout_width="183dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
-        app:srcCompat="@drawable/bubblenew" />
-
-    <ImageView
         android:id="@+id/dropZone3"
-        android:layout_width="77dp"
-        android:layout_height="81dp"
+        android:layout_width="85dp"
+        android:layout_height="79dp"
+        android:alpha="0"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
+        app:layout_constraintVertical_bias="0.268"
         app:srcCompat="@drawable/dropzone_sort" />
 
     <TextView

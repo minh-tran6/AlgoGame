@@ -58,7 +58,7 @@ public class Sort_Game extends AppCompatActivity {
                 ImageView drop;
                 if(random == 1)
                 {
-                     drop = (ImageView) findViewById(R.id.dropZone_1);
+                     drop = (ImageView) findViewById(R.id.dropZone_2);
                 }
                 else if(random == 2)
                 {
@@ -66,7 +66,7 @@ public class Sort_Game extends AppCompatActivity {
                 }
                 else
                 {
-                    drop = (ImageView) findViewById(R.id.dropZone5);
+                    drop = (ImageView) findViewById(R.id.dropZone6);
                 }
 
                 switch(dragevent)
@@ -109,7 +109,7 @@ public class Sort_Game extends AppCompatActivity {
                 ImageView drop;
                 if(random == 1)
                 {
-                    drop = (ImageView) findViewById(R.id.dropZone_2);
+                    drop = (ImageView) findViewById(R.id.dropZone_1);
                 }
                 else if(random == 2)
                 {
@@ -117,7 +117,7 @@ public class Sort_Game extends AppCompatActivity {
                 }
                 else
                 {
-                    drop = (ImageView) findViewById(R.id.dropZone6);
+                    drop = (ImageView) findViewById(R.id.dropZone5);
                 }
                 switch(dragevent)
                 {
@@ -168,8 +168,8 @@ public class Sort_Game extends AppCompatActivity {
             Button subBut = (Button) findViewById(R.id.submit_button);
 
             //Setting drag Listeners for drop points
-            Iimg2.setOnDragListener(dragListener);
-            Iimg3.setOnDragListener(dragListener2);
+            Iimg2.setOnDragListener(dragListener2);
+            Iimg3.setOnDragListener(dragListener);
 
             //Evan use "flag" to determine what the submit button does. This is a test for now
             //Flag 1 is correct, 2 is wrong, 0 is when the user hasnt properly put the textView onto the correct drop zone.
@@ -239,8 +239,8 @@ public class Sort_Game extends AppCompatActivity {
             ImageView Simg2 = (ImageView) findViewById(R.id.dropZone6);
             Button subButS = (Button) findViewById(R.id.sSub);
             //Setting drop zones
-            Simg1.setOnDragListener(dragListener);
-            Simg2.setOnDragListener(dragListener2);
+            Simg1.setOnDragListener(dragListener2);
+            Simg2.setOnDragListener(dragListener);
 
             //Button for selection sort
             subButS.setOnClickListener(new View.OnClickListener() {

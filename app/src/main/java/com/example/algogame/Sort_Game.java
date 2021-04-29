@@ -239,8 +239,8 @@ public class Sort_Game extends AppCompatActivity {
             ImageView Simg2 = (ImageView) findViewById(R.id.dropZone6);
             Button subButS = (Button) findViewById(R.id.sSub);
             //Setting drop zones
-            Simg1.setOnDragListener(dragListener2);
-            Simg2.setOnDragListener(dragListener);
+            Simg1.setOnDragListener(dragListener);
+            Simg2.setOnDragListener(dragListener2);
 
             //Button for selection sort
             subButS.setOnClickListener(new View.OnClickListener() {

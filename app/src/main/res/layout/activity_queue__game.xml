@@ -121,7 +121,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginBottom="150dp"
-        android:background="@drawable/push_button_resource"
+        android:background="@drawable/left_button_resource"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -133,7 +133,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="150dp"
-        android:background="@drawable/pop_button_resource"
+        android:background="@drawable/right_button_resource"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -201,14 +201,15 @@
 
     <Button
         android:id="@+id/down_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="150dp"
-        android:text="DOWN"
+        android:layout_marginBottom="148dp"
+        android:background="@drawable/down_button_resource"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/right_button"
         app:layout_constraintStart_toEndOf="@+id/left_button" />

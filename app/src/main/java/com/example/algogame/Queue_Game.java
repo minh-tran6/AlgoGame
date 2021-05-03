@@ -39,7 +39,7 @@ public class Queue_Game extends AppCompatActivity {
     String timerFront = "00:";
     String timerEnd;
     CountDownTimer timer;
-    int value = 100;
+    int value = 60;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -118,7 +118,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/push_button_resource"
         app:backgroundTint="@null"
         app:layout_constraintStart_toStartOf="parent"

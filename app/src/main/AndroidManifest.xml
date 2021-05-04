@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlgoGame">
-        <activity android:name=".QueueandDequeue_Queue_Tutorial"></activity>
+        <activity android:name=".animationToSort"></activity>
+        <activity android:name=".Sort_Game_Tutorial" />
+        <activity android:name=".animationToQueue" />
+        <activity android:name=".animationToStack" />
+        <activity android:name=".QueueandDequeue_Queue_Tutorial" />
         <activity android:name=".getName" />
         <activity android:name=".homescreen" />
         <activity android:name=".Sort_Game" />

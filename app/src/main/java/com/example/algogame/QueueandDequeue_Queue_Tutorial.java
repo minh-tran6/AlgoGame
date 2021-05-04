@@ -22,7 +22,7 @@ public class QueueandDequeue_Queue_Tutorial extends AppCompatActivity {
         start_button_queue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newQueue = new Intent(getApplicationContext(),Queue_Game.class);
+                Intent newQueue = new Intent(getApplicationContext(),animationToQueue.class);
                 startActivity(newQueue);
                 finish();
             }

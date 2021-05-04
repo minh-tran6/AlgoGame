@@ -35,6 +35,7 @@ public class homescreen extends AppCompatActivity {
         stackgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent newStackGame = new Intent(homescreen.this,PushandPop_Stack_Tutorial.class);
                 startActivity(newStackGame);
 
@@ -65,7 +66,7 @@ public class homescreen extends AppCompatActivity {
         sortgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newSortGame = new Intent(homescreen.this,Sort_Game.class);
+                Intent newSortGame = new Intent(homescreen.this,Sort_Game_Tutorial.class);
                 startActivity(newSortGame);
 
 

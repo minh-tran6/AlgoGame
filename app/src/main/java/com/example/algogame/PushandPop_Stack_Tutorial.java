@@ -21,7 +21,7 @@ public class PushandPop_Stack_Tutorial extends AppCompatActivity {
         start_button_stack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newGame = new Intent(getApplicationContext(),Stack_Game.class);
+                Intent newGame = new Intent(getApplicationContext(),animationToStack.class);
                 startActivity(newGame);
                 finish();
             }

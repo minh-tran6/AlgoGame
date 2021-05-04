@@ -34,6 +34,6 @@ The 3 three games we have should help visualize how each of this structures work
 
 
 ### Notes
-1. We could not optimize the app to look nice on higher resolutions due to time constraints. Please use the default resolution
+1. We could not optimize the app to look nice on higher resolutions due to time constraints. Please use the default resolution and portrait only
 2. Sort game challenges: Due to time constraints the position of the dropped tile will be off a bit
 

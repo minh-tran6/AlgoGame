@@ -11,14 +11,14 @@ The 3 three games we have should help visualize how each of this structures work
 
 ## STACK GAME
    - When the user chose stack game from the main screen, a tutorial screen will appear, describing how to play the game.
-   - User can choose to play the game by pressing the "Start" button on the tutorial screen.
-   - The gameplay screen consists the timer, prompt, scrambled letters, the stack, push, pop, and submit button. Main objective is to push/pop in a certain sequent so that the scrambled letter matches the prompt.
+   - Users can choose to play the game by pressing the "Start" button on the tutorial screen.
+   - The gameplay screen consists of the timer, prompt, scrambled letters, the stack, push, pop, and submit button. The main objective is to push/pop in a certain sequence so that the scrambled letter matches the prompt.
    - Once the game is over, a pop up will appear and bring the user back to the main screen.
 
 ## QUEUE GAME
-   - When the user chose queue game from the main screen, a tutorial screen will appear, describing how to play the game.
+   - When the user chooses the queue game from the main screen, a tutorial screen will appear, describing how to play the game.
    - User can choose to play the game by pressing the "Start" button on the tutorial screen.
-   - The gameplay screen consists the timer, prompt, scrambled letters, the stack, the robot, left, right, down button. Main objective is to pick left, right, down direction in such a way that the robot will pick up the letters to make a word that match the prompt. The direction orders will behave like a queue (FIFO).
+   - The gameplay screen consists of the timer, prompt, scrambled letters, the stack, the robot, left, right, down button. Main objective is to pick left, right, down direction in such a way that the robot will pick up the letters to make a word that matches the prompt. The direction of the orders will behave like a queue (FIFO).
    - Once the game is over, a pop up will appear and bring the user back to the main screen.
 
 ## SORT GAME

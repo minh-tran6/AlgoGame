@@ -16,12 +16,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true">
+
         <TextView
+            android:id="@+id/textInScroll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CONCHOATOC"
-            android:textSize="20dp"
-            android:id="@+id/textInScroll"/>
+            android:textSize="18sp" />
     </ScrollView>
 
     <Button

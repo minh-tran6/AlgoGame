@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.service.autofill.TextValueSanitizer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -30,11 +31,13 @@ public class Sort_Game_MCQ extends AppCompatActivity {
     private static Button MCQ_submit;
 
     private ArrayList<MC_Question> questions;
+    private int currentQuestionIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sort__game__m_c_q);
+        this.initialize();
     }
 
     private void initialize() {
@@ -53,5 +56,25 @@ public class Sort_Game_MCQ extends AppCompatActivity {
         MCQ_submit = (Button)findViewById(R.id.MCQ_submit);
 
         questions = new ArrayList<MC_Question>();
+
+        questions.add(new MC_Question("What is insertion sort's time complexity?", "n", "n^2", "1", "n^2", "What is insertion sort's space complexity?", "1", "log n","n", "1"));
+        questions.add(new MC_Question("What is bubble sort's time complexity?", "n^2", "log n", "log n^2", "n^2", "What is bubble sort's space complexity?", "log n", "n^2", "1", "1"));
+        questions.add(new MC_Question("What is selection sort's time complexity?", "n^3", "1", "n^2", "n^2", "What is selection sort's space complexity?", "n", "1", "log n^2", "1"));
+        this.displayQuestion(currentQuestionIndex);
+
+        MCQ_submit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                advance();
+            }
+        });
     }
+}
+
+private void displayQuestion(int index) {
+
+}
+
+private void advance() {
+
 }

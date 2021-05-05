@@ -59,7 +59,7 @@ public class Sort_Game_MCQ extends AppCompatActivity {
         questions = new ArrayList<MC_Question>();
 
         questions.add(new MC_Question("What is insertion sort's time complexity?", "n", "n^2", "1", "b", "What is insertion sort's space complexity?", "1", "log n","n", "a"));
-        questions.add(new MC_Question("What is bubble sort's time complexity?", "n^2", "log n", "log n^2", "a", "What is bubble sort's space complexity?", "log n", "n^2", "c", "1"));
+        questions.add(new MC_Question("What is bubble sort's time complexity?", "n^2", "log n", "log n^2", "a", "What is bubble sort's space complexity?", "log n", "n^2", "1", "c"));
         questions.add(new MC_Question("What is selection sort's time complexity?", "n^3", "1", "n^2", "c", "What is selection sort's space complexity?", "n", "1", "log n^2", "b"));
         this.displayQuestion(currentQuestionIndex);
 

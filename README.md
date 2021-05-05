@@ -6,8 +6,9 @@ The 3 three games we have should help visualize how each of this structures work
 ---
 
 ## HOMESCREEN
-   - (how to run)
-   - (how to run)
+   - Once the application is launched, it will go to the "get user's name" screen where the user can decide to play. 
+   - Once user presses start, a dialog edit text will pop up to ask user name and prompt user to game option or homescreen.
+   - Homescreen will consist user's name, buttons directory to games, and exit button.
 
 ## STACK GAME
    - When the user chose stack game from the main screen, a tutorial screen will appear, describing how to play the game.
@@ -34,6 +35,6 @@ The 3 three games we have should help visualize how each of this structures work
 
 
 ### Notes
-1. We could not optimize the app to look nice on higher resolutions due to time constraints. Please use the default resolution
+1. We could not optimize the app to look nice on higher resolutions due to time constraints. Please use the default resolution and portrait only
 2. Sort game challenges: Due to time constraints the position of the dropped tile will be off a bit
 

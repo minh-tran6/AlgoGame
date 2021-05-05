@@ -56,17 +56,21 @@ public class Sort_Game extends AppCompatActivity {
                 int dragevent = event.getAction();
                 View view =  (View) event.getLocalState();
                 ImageView drop;
+                TextView theDropped;
                 if(random == 1)
                 {
                      drop = (ImageView) findViewById(R.id.dropZone_2);
+                    theDropped = (TextView) findViewById(R.id.number_text);
                 }
                 else if(random == 2)
                 {
                      drop = (ImageView) findViewById(R.id.dropZone3);
+                    theDropped = (TextView) findViewById(R.id.bAns);
                 }
                 else
                 {
                     drop = (ImageView) findViewById(R.id.dropZone6);
+                    theDropped = (TextView) findViewById(R.id.sAns);
                 }
 
                 switch(dragevent)
@@ -92,8 +96,8 @@ public class Sort_Game extends AppCompatActivity {
                         drop.getLocationOnScreen(location);
                         int x = location[0];
                         int y = location[1];
-                        view.setX(x);
-                        view.setY(y);
+                        theDropped.setX(x);
+                        theDropped.setY(y);
 
                         break;
                 }
@@ -107,17 +111,21 @@ public class Sort_Game extends AppCompatActivity {
                 int dragevent = event.getAction();
                 View view =  (View) event.getLocalState();
                 ImageView drop;
+                TextView theDropped;
                 if(random == 1)
                 {
                     drop = (ImageView) findViewById(R.id.dropZone_1);
+                    theDropped = (TextView) findViewById(R.id.number_text);
                 }
                 else if(random == 2)
                 {
                     drop = (ImageView) findViewById(R.id.dropZone4);
+                    theDropped = (TextView) findViewById(R.id.bAns);
                 }
                 else
                 {
                     drop = (ImageView) findViewById(R.id.dropZone5);
+                    theDropped = (TextView) findViewById(R.id.sAns);
                 }
                 switch(dragevent)
                 {
@@ -143,8 +151,8 @@ public class Sort_Game extends AppCompatActivity {
                         drop.getLocationOnScreen(location);
                         int x = location[0];
                         int y = location[1];
-                        view.setX(x);
-                        view.setY(y);
+                        theDropped.setX(x);
+                        theDropped.setY(y);
 
 
                         break;

@@ -6,8 +6,9 @@ The 3 three games we have should help visualize how each of this structures work
 ---
 
 ## HOMESCREEN
-   - (how to run)
-   - (how to run)
+   - Once the application is launch, it will direct to get user's name screen where user can decide to play. 
+   - Once user presses start, a dialog edit text will pop up to ask user name and prompt user to game option or homescreen.
+   - Homescreen will consist user's name, buttons directory to games, and exit button.
 
 ## STACK GAME
    - When the user chose stack game from the main screen, a tutorial screen will appear, describing how to play the game.

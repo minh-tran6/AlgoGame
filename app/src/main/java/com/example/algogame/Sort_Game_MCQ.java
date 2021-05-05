@@ -105,7 +105,9 @@ public class Sort_Game_MCQ extends AppCompatActivity {
     }
 
     private void advance() {
-        currentQuestionIndex = (currentQuestionIndex + 1) % questions.size();
+        currentQuestionIndex = (currentQuestionIndex + 1);
+        if(currentQuestionIndex > 3)
+            return; // Remove this and add in how we move on from the MCQ section.
         displayQuestion(currentQuestionIndex);
     }
 }

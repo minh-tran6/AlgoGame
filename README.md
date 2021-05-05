@@ -6,7 +6,7 @@ The 3 three games we have should help visualize how each of this structures work
 ---
 
 ## HOMESCREEN
-   - Once the application is launch, it will direct to get user's name screen where user can decide to play. 
+   - Once the application is launched, it will go to the "get user's name" screen where the user can decide to play. 
    - Once user presses start, a dialog edit text will pop up to ask user name and prompt user to game option or homescreen.
    - Homescreen will consist user's name, buttons directory to games, and exit button.
 

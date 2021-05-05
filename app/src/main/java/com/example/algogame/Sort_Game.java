@@ -3,6 +3,7 @@ package com.example.algogame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.DragEvent;
@@ -186,7 +187,10 @@ public class Sort_Game extends AppCompatActivity {
                 public void onClick(View v) {
                     if(flag == 1)
                     {
-                        Toast.makeText(Sort_Game.this, "Correct! Evan will implement MCQ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Sort_Game.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        Intent mcqGame = new Intent(Sort_Game.this,Sort_Game_MCQ.class);
+                        startActivity(mcqGame);
+                        finish();
                     }
                     else if(flag == 2)
                     {
@@ -220,7 +224,10 @@ public class Sort_Game extends AppCompatActivity {
                 public void onClick(View v) {
                     if(flag == 1)
                     {
-                        Toast.makeText(Sort_Game.this, "Correct! Evan will implement MCQ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Sort_Game.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        Intent mcqGame = new Intent(Sort_Game.this,Sort_Game_MCQ.class);
+                        startActivity(mcqGame);
+                        finish();
                     }
                     else if(flag == 2)
                     {
@@ -256,7 +263,10 @@ public class Sort_Game extends AppCompatActivity {
                 public void onClick(View v) {
                     if(flag == 1)
                     {
-                        Toast.makeText(Sort_Game.this, "Correct! Evan will implement MCQ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Sort_Game.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        Intent mcqGame = new Intent(Sort_Game.this,Sort_Game_MCQ.class);
+                        startActivity(mcqGame);
+                        finish();
                     }
                     else if(flag == 2)
                     {

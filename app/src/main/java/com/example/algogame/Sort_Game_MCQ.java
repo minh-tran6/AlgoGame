@@ -69,12 +69,21 @@ public class Sort_Game_MCQ extends AppCompatActivity {
             }
         });
     }
+    private void displayQuestion(int index) {
+        MCQ_question1.setText(questions.get(currentQuestionIndex).getQuestion1Text());
+        MCQ_question2.setText(questions.get(currentQuestionIndex).getQuestion2Text());
+        rd_1.setText(questions.get(currentQuestionIndex).getChoice1A());
+        rd_2.setText(questions.get(currentQuestionIndex).getChoice1B());
+        rd_3.setText(questions.get(currentQuestionIndex).getChoice1C());
+        rd_4.setText(questions.get(currentQuestionIndex).getChoice2A());
+        rd_5.setText(questions.get(currentQuestionIndex).getChoice2B());
+        rd_6.setText(questions.get(currentQuestionIndex).getChoice2C());
+
+    }
+
+    private void advance() {
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.size();
+        displayQuestion(currentQuestionIndex);
+    }
 }
 
-private void displayQuestion(int index) {
-
-}
-
-private void advance() {
-
-}

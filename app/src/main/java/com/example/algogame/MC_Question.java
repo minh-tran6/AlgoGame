@@ -111,8 +111,8 @@ public class MC_Question {
         this.creditAlreadyGiven2 = creditAlreadyGiven2;
     }
 
-    public boolean isCorrectAnswer (String selectedAnswer, String correctAnswer) {
-        return (selectedAnswer.equals(correctAnswer));
+    public boolean isCorrectAnswer (String selectedAnswer1, String selectedAnswer2) {
+        return (selectedAnswer1.equals(correctAnswer1) && selectedAnswer2.equals(correctAnswer2));
     }
 
     public MC_Question(String question1Text, String choice1A, String choice1B, String choice1C, String correctAnswer1, String question2Text, String choice2A, String choice2B, String choice2C, String correctAnswer2) {

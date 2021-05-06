@@ -29,13 +29,13 @@ public class QueueandDequeue_Queue_Tutorial extends AppCompatActivity {
             }
         });
         textInScroll = findViewById(R.id.textInScroll);
-        textInScroll.setText("Your  goal  is  to  make  scramble  word  to  become  prompt  word.\n" +
+        textInScroll.setText("Your  goal  is  to  match  the  scrambled  word  to  the  prompted  word.\n" +
                 "\n\n\n" +
                 "1.  LEFT  :  move  your  Robot  (|)  to  the  left.\n\n" +
                 "2.  RIGHT  :  move  your  Robot  (|)  to  the  right.\n\n" +
-                "3.  DOWN  :  at  the  position  of  Robot  (|) ,  click  this  button  means  you  are  choosing  this  letter  of  Scramble  to  and  move  to  Result.\n\n" +
+                "3.  DOWN  :  at  the  position  of  Robot  (|) ,  clicking  this  button  means  you  are  choosing  this  letter  of  the  Scramble  to  move  to  the   Result.\n\n" +
                 "4.  RESET  :  restart  the  game  and  try  again  with  Scramble  word.\n\n" +
-                "5.  SUBMIT  :  when  you’re  ready  with  your  RESULT.\n\n\n\n" +
+                "5.  SUBMIT  :  tap  when  you’re  ready  with  your  RESULT.\n\n\n\n" +
                 "MAKE  SURE  YOU ' RE  FINISHED  BEFORE  TIME ' S  UP.");
         textInScroll.setMovementMethod(new ScrollingMovementMethod());
     }

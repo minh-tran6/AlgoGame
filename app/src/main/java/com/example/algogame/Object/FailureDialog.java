@@ -14,7 +14,7 @@ public class FailureDialog extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("NOT MATCH")
+        builder.setTitle("NOT A MATCH")
                 .setMessage("You're gonna WIN. We know it!");
         return builder.create();
     }

@@ -22,7 +22,7 @@ public class SuccessDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Congratulations!")
-                .setMessage("You make a matching word!");
+                .setMessage("You win");
 
         return builder.create();
     }

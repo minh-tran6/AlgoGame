@@ -11,7 +11,7 @@ The 3 three games we have should help visualize how each of this structures work
    - Homescreen will consist user's name, buttons directory to games, and exit button.
 
 ## STACK GAME
-   - When the user chose stack game from the main screen, a tutorial screen will appear, describing how to play the game.
+   - When the user chooses stack game from the main screen, a tutorial screen will appear, describing how to play the game.
    - Users can choose to play the game by pressing the "Start" button on the tutorial screen.
    - The gameplay screen consists of the timer, prompt, scrambled letters, the stack, push, pop, and submit button. The main objective is to push/pop in a certain sequence so that the scrambled letter matches the prompt.
    - Once the game is over, a pop up will appear and bring the user back to the main screen.

@@ -15,15 +15,28 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:scrollbarSize="10dp">
+
         <TextView
+            android:id="@+id/textInScroll"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
+            android:scrollbars="vertical"
             android:text="CONCHOATOC"
-            android:textSize="20dp"
-            android:id="@+id/textInScroll"/>
+            android:textSize="20dp" />
     </ScrollView>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifStack"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/scrollView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src='@drawable/tutorial_stack' />
+
 
     <Button
         android:id="@+id/start_button_stack"

@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="car.json"/>
+        app:lottie_fileName="car.json"
+        tools:ignore="MissingClass" />
 
 
 </RelativeLayout>

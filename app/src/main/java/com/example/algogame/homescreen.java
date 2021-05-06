@@ -31,7 +31,6 @@ public class homescreen extends AppCompatActivity {
         // STACK GAME MENU
 
         stackgame = findViewById(R.id.button_stack);
-        stackgame.setBackgroundColor(Color.BLACK);
         stackgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +46,6 @@ public class homescreen extends AppCompatActivity {
         //------------------------------------------------------------------------------
         // QUEUE GAME MENU
         queuegame = findViewById(R.id.button_queue);
-        queuegame.setBackgroundColor(Color.BLACK);
         queuegame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +60,6 @@ public class homescreen extends AppCompatActivity {
         //------------------------------------------------------------------------------
         // SORT GAME MENU
         sortgame = findViewById(R.id.button_sort);
-        sortgame.setBackgroundColor(Color.BLACK);
         sortgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +74,6 @@ public class homescreen extends AppCompatActivity {
         //------------------------------------------------------------------------------
         // EXIT APP
         exitApp = findViewById(R.id.button_exit);
-        exitApp.setBackgroundColor(Color.BLACK);
         exitApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

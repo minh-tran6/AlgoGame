@@ -9,6 +9,7 @@
     android:paddingRight="20dp"
     android:paddingTop="20dp"
     android:paddingBottom="20dp"
+    android:background="@drawable/riverscloud"
     tools:context=".Sort_Game_Tutorial">
 
     <ScrollView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_da76fa55c2196e4a0a48408a451b58a"
+    android:background="@drawable/mzslng"
     tools:context=".homescreen">
 
     <TextView
@@ -66,6 +66,7 @@
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:layout_marginBottom="288dp"
+        android:background="@drawable/submit_button_resource"
         android:text="QUEUE GAME"
         android:textSize="18sp"
         android:textStyle="bold|italic"
@@ -81,6 +82,7 @@
         android:layout_marginBottom="380dp"
         android:text="STACK GAME"
         android:textSize="18sp"
+        android:background="@drawable/submit_button_resource"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -94,6 +96,7 @@
         android:layout_marginBottom="200dp"
         android:text="SORT GAME"
         android:textSize="18sp"
+        android:background="@drawable/submit_button_resource"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -106,6 +109,7 @@
         android:layout_marginRight="124dp"
         android:layout_marginBottom="100dp"
         android:text="EXIT"
+        android:background="@drawable/submit_button_resource"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"

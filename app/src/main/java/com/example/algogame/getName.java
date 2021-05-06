@@ -23,8 +23,6 @@ public class getName extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_name);
         button_get_name = findViewById(R.id.button_name);
-        button_get_name.setBackgroundColor(Color.BLACK);
-
         button_get_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

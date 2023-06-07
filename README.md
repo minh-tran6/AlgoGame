@@ -31,7 +31,7 @@ The 3 three games we have should help visualize how each of this structures work
    - The tile will only move if in the drop point of which there are two for each sort:
    -     For insertion sort it is in the empty spot within the array and to the left of the array
    -     For the other sorts it is on the left and right side of the array.
-   - Once complete you can return to the homes creen anytime using the standard android UI.
+   - Once complete you can return to the home screen anytime using the standard android UI.
 
 
 ### Notes
